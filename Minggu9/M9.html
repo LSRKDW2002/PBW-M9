@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid</title>
+    <style>
+        body{
+            margin: 0;
+            background-color: midnightblue;
+            
+        }
+
+        .container{
+            width: 100vw;
+            height: 100vh;
+            font-family: 'Quicksand', sans-serif;
+            font-weight: bold;
+            font-size: 20px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: 50px 1fr 1fr 100px;
+            gap: 5px;
+            padding: 10px;
+            box-sizing: border-box;   
+            color: gold;
+            
+            
+        }
+
+        .container div{
+            pad: 10px;
+            border: 1px solid #000000;
+            border: 2px solid gold;
+            padding: 5px;
+            background-color: darkblue;
+        }
+
+        .header{
+            
+            grid-column-start: 1;
+            grid-column-end: 4;
+            background-color: blue;
+            text-align: center;
+        }
+
+        .input-search
+        {
+            padding-right: 20px;
+            width: 30%;
+            border: 3px solid gold;
+            border-radius: 0 0 0 10px;
+            padding: 1px;
+        }
+
+        .input-submit
+        {
+            margin-left: -5px;
+            border: none;
+            border-radius: 0 10px 0 0px;
+            padding: 4px;
+            width: 5%;
+            font-weight: bold;
+            background-color: gold;
+        }
+
+        .content-large{
+            grid-row-start: 2;
+            grid-row-end: span 2;
+            grid-column-start: 1;
+            grid-column-end: 3;
+        }
+
+        .footer{
+            grid-column-start: 1;
+            grid-column-end: 4;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    
+    
+    <div class="container">
+        <div class="header"> Site's Title 
+            <input type="search" class="input-search" placeholder="Type here...">
+            <button type="submit" class="input-submit">Search</button>
+        </div>
+        <div class="content-large"> Content #1</div>
+        <div class="content-small">Content #2</div>  
+        <div class="content-small">Content #3</div>  
+        <div class="footer"><h4>&copy;Site Name, Inc. All Rights Reserved</h4></div>  
+      </div>
+</body>
+</html>
